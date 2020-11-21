@@ -7,4 +7,4 @@ class SongList extends Component {
   }
 }
 
-export default SongList;
+export default connect() (SongList);
