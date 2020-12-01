@@ -19,7 +19,7 @@ const SongDetail = ({ song }) => {
         <br />
         ⌚︎ Duration: {song.duration}
       </p>
-      <p>Link: </p>
+      <p><a href={song.video} target="_blank"> 🔥 Watch the music video </a></p>
     </div>
   );
 };
