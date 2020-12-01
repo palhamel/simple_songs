@@ -6,7 +6,22 @@ import { connect } from "react-redux";
 const SongDetail = ({ song }) => {
   // console.log('in SongDetail component:', props.song.title);
   console.log(song);
-return <div>Song details here</div>;
+  // check empty state:
+  if (!song) {
+    return <div>Please select a song 🎧</div>;
+  }
+
+  return (
+    <div>
+      <h3>Selected track</h3>
+      <p>
+        ● Title: {song.title}
+        <br />
+        ⌚︎ Duration: {song.duration}
+      </p>
+      <p>Link: </p>
+    </div>
+  );
 };
 
 // data från state to connect:
@@ -16,4 +31,3 @@ const mapStateToProps = (state) => {
 };
 
 export default connect(mapStateToProps)(SongDetail);
-
