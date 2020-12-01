@@ -12,14 +12,23 @@ const SongDetail = ({ song }) => {
   }
 
   return (
-    <div>
-      <h3>Selected track</h3>
-      <p>
-        ● Title: {song.title}
-        <br />
-        ⌚︎ Duration: {song.duration}
-      </p>
-      <p><a href={song.video} target="_blank"> 🔥 Watch the music video </a></p>
+    <div className="ui card">
+      {/* <h3>Selected track</h3> */}
+      <div className="content">
+        <div className="header">{song.title}</div>
+      </div>
+      <div className="content">
+        <h4 className="ui sub header">{song.artist}</h4>
+        <p>
+          <br />
+          ⌚︎ Duration: {song.duration}
+        </p>
+        <p>
+          <a className="ui inverted button violet " href={song.video} target="_blank" rel="noreferrer">
+            Watch Video
+          </a>
+        </p>
+      </div>
     </div>
   );
 };
