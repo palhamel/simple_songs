@@ -28,7 +28,7 @@ class SongList extends Component {
 }
 // data från state to connect:
 const mapStateToProps = (state) => {
-  console.log(state);
+  // console.log(state);
   return { songs: state.songs };
 };
 
